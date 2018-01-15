@@ -13,6 +13,7 @@
 		0433518F200CDF2C006D0683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0433518E200CDF2C006D0683 /* Assets.xcassets */; };
 		04335192200CDF2C006D0683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04335190200CDF2C006D0683 /* LaunchScreen.storyboard */; };
 		04335195200CDF2C006D0683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335194200CDF2C006D0683 /* main.m */; };
+		0433519D200CDF4B006D0683 /* ViewControllerGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0433519C200CDF4B006D0683 /* ViewControllerGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		04335191200CDF2C006D0683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04335193200CDF2C006D0683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04335194200CDF2C006D0683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0433519B200CDF4B006D0683 /* ViewControllerGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerGame.h; sourceTree = "<group>"; };
+		0433519C200CDF4B006D0683 /* ViewControllerGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		04335184200CDF2C006D0683 /* Lab1JohanHjalmarsson */ = {
 			isa = PBXGroup;
 			children = (
+				0433519B200CDF4B006D0683 /* ViewControllerGame.h */,
+				0433519C200CDF4B006D0683 /* ViewControllerGame.m */,
 				04335185200CDF2C006D0683 /* AppDelegate.h */,
 				04335186200CDF2C006D0683 /* AppDelegate.m */,
 				04335188200CDF2C006D0683 /* ViewController.h */,
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0433519D200CDF4B006D0683 /* ViewControllerGame.m in Sources */,
 				0433518A200CDF2C006D0683 /* ViewController.m in Sources */,
 				04335195200CDF2C006D0683 /* main.m in Sources */,
 				04335187200CDF2C006D0683 /* AppDelegate.m in Sources */,

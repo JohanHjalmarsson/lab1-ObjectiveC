@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041B560F200F90CF003D25AF /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B560E200F90CF003D25AF /* ViewControllerSettings.m */; };
+		041B5612200F90E5003D25AF /* ViewControllerAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B5611200F90E5003D25AF /* ViewControllerAbout.m */; };
+		041B5615200F9187003D25AF /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B5614200F9187003D25AF /* Setting.m */; };
 		04335187200CDF2C006D0683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335186200CDF2C006D0683 /* AppDelegate.m */; };
 		0433518A200CDF2C006D0683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335189200CDF2C006D0683 /* ViewController.m */; };
 		0433518D200CDF2C006D0683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0433518B200CDF2C006D0683 /* Main.storyboard */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041B560D200F90CF003D25AF /* ViewControllerSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerSettings.h; sourceTree = "<group>"; };
+		041B560E200F90CF003D25AF /* ViewControllerSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSettings.m; sourceTree = "<group>"; };
+		041B5610200F90E5003D25AF /* ViewControllerAbout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerAbout.h; sourceTree = "<group>"; };
+		041B5611200F90E5003D25AF /* ViewControllerAbout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAbout.m; sourceTree = "<group>"; };
+		041B5613200F9187003D25AF /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		041B5614200F9187003D25AF /* Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		04335182200CDF2C006D0683 /* Lab1JohanHjalmarsson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1JohanHjalmarsson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04335185200CDF2C006D0683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04335186200CDF2C006D0683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,8 +74,14 @@
 				0433519C200CDF4B006D0683 /* ViewControllerGame.m */,
 				04335185200CDF2C006D0683 /* AppDelegate.h */,
 				04335186200CDF2C006D0683 /* AppDelegate.m */,
+				041B5613200F9187003D25AF /* Setting.h */,
+				041B5614200F9187003D25AF /* Setting.m */,
 				04335188200CDF2C006D0683 /* ViewController.h */,
 				04335189200CDF2C006D0683 /* ViewController.m */,
+				041B560D200F90CF003D25AF /* ViewControllerSettings.h */,
+				041B560E200F90CF003D25AF /* ViewControllerSettings.m */,
+				041B5610200F90E5003D25AF /* ViewControllerAbout.h */,
+				041B5611200F90E5003D25AF /* ViewControllerAbout.m */,
 				0433518B200CDF2C006D0683 /* Main.storyboard */,
 				0433518E200CDF2C006D0683 /* Assets.xcassets */,
 				04335190200CDF2C006D0683 /* LaunchScreen.storyboard */,
@@ -147,10 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041B5615200F9187003D25AF /* Setting.m in Sources */,
 				0433519D200CDF4B006D0683 /* ViewControllerGame.m in Sources */,
 				0433518A200CDF2C006D0683 /* ViewController.m in Sources */,
 				04335195200CDF2C006D0683 /* main.m in Sources */,
 				04335187200CDF2C006D0683 /* AppDelegate.m in Sources */,
+				041B5612200F90E5003D25AF /* ViewControllerAbout.m in Sources */,
+				041B560F200F90CF003D25AF /* ViewControllerSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

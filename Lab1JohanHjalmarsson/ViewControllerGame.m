@@ -12,6 +12,9 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel *sliderValueLabel;
 @property (weak, nonatomic) IBOutlet UITextView *displayCorrectAnswer;
+@property (nonatomic) int randomNumber;
+@property (weak, nonatomic) IBOutlet UIButton *guessButton;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *correctAnswerLabel;
 
@@ -22,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self showUI:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +45,48 @@
 }
 - (IBAction)takeGuess:(id)sender {
     int random = [self getRandomNumber];
+    
     if ([self getSliderValue] == random) {
         [self.displayCorrectAnswer setText:@"Rätt!"];
     } else {
         [self.displayCorrectAnswer setText:@"Fel! Rätt svar var: "];
         [self.correctAnswerLabel setText:[NSString stringWithFormat:@"%i", random]];
     }
+}
+- (IBAction)takeGuess2:(id)sender {
+    if ([self getSliderValue] == self.randomNumber) {
+        [self.displayCorrectAnswer setText:@"Rätt! Talet var:"];
+        [self.correctAnswerLabel setText:[NSString stringWithFormat:@"%i", self.randomNumber]];
+        [self.startButton setTitle:@"Spela igen" forState:UIControlStateNormal];
+    } else {
+        if([self getSliderValue] < self.randomNumber) {
+            [self.displayCorrectAnswer setText:@"Nej. Talet är för lågt!"];
+        } else {
+            [self.displayCorrectAnswer setText:@"Nej. Talet är för högt!"];
+        }
+    }
+    
+}
+
+- (void)showUI:(BOOL)show {
+    if(show) {
+        self.slider.hidden = NO;
+        self.guessButton.hidden = NO;
+        self.displayCorrectAnswer.hidden = NO;
+        self.sliderValueLabel.hidden = NO;
+    } else {
+        self.slider.hidden = YES;
+        self.guessButton.hidden = YES;
+        self.displayCorrectAnswer.hidden = YES;
+        self.sliderValueLabel.hidden = YES;
+    }
+}
+- (IBAction)onStartButton:(id)sender {
+    self.randomNumber = [self getRandomNumber];
+    [self.displayCorrectAnswer setText:@""];
+    [self.correctAnswerLabel setText:@""];
+    [self showUI:YES];
+    NSLog(@"%i", self.randomNumber);
 }
 
 - (int) getRandomNumber {

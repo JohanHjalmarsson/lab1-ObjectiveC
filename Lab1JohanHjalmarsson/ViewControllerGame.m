@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerGame.h"
+#import "Setting.h"
 
 @interface ViewControllerGame ()
 @property (weak, nonatomic) IBOutlet UISlider *slider;
@@ -15,6 +16,8 @@
 @property (nonatomic) int randomNumber;
 @property (weak, nonatomic) IBOutlet UIButton *guessButton;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (nonatomic) Setting *settings;
+@property (strong, nonatomic) IBOutlet UIView *viewWindow;
 
 @property (weak, nonatomic) IBOutlet UILabel *correctAnswerLabel;
 
@@ -26,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showUI:NO];
+   // [self setBackground];
+    [self setTheme];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +96,24 @@
 
 - (int) getRandomNumber {
     return arc4random_uniform(100);
+}
+
+- (void)setBackground {
+    self.settings = [[Setting alloc] init];
+    [self.settings setProperties];
+    self.viewWindow.backgroundColor = [UIColor colorWithRed:self.settings.colorRedP green:self.settings.colorGreenP blue:self.settings.colorBlueP alpha:0.7f];
+    
+}
+
+- (void)setTheme {
+    self.settings = [[Setting alloc] init];
+    [self.settings setProperties];
+    self.viewWindow.backgroundColor = [UIColor colorWithRed:self.settings.colorRedPrimary green:self.settings.colorGreenPrimary blue:self.settings.colorBluePrimary alpha:0.7f];
+    UIColor *buttonColor = [UIColor colorWithRed:self.settings.colorRedSecondary green:self.settings.colorGreenSecondary blue:self.settings.colorBlueSecondary alpha:1.0f];
+   // self.aboutButton.backgroundColor = buttonColor;
+   // self.settingsButton.backgroundColor = buttonColor;
+   // self.gameButton.backgroundColor = buttonColor;
+
 }
 
 /*

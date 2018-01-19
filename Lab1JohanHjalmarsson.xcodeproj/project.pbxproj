@@ -10,6 +10,7 @@
 		041B560F200F90CF003D25AF /* ViewControllerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B560E200F90CF003D25AF /* ViewControllerSettings.m */; };
 		041B5612200F90E5003D25AF /* ViewControllerAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B5611200F90E5003D25AF /* ViewControllerAbout.m */; };
 		041B5615200F9187003D25AF /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B5614200F9187003D25AF /* Setting.m */; };
+		041B56432010BBA7003D25AF /* ProfileContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B56422010BBA7003D25AF /* ProfileContent.m */; };
 		04335187200CDF2C006D0683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335186200CDF2C006D0683 /* AppDelegate.m */; };
 		0433518A200CDF2C006D0683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335189200CDF2C006D0683 /* ViewController.m */; };
 		0433518D200CDF2C006D0683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0433518B200CDF2C006D0683 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 		041B5611200F90E5003D25AF /* ViewControllerAbout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAbout.m; sourceTree = "<group>"; };
 		041B5613200F9187003D25AF /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		041B5614200F9187003D25AF /* Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		041B56412010BBA7003D25AF /* ProfileContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileContent.h; sourceTree = "<group>"; };
+		041B56422010BBA7003D25AF /* ProfileContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileContent.m; sourceTree = "<group>"; };
 		04335182200CDF2C006D0683 /* Lab1JohanHjalmarsson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1JohanHjalmarsson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04335185200CDF2C006D0683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04335186200CDF2C006D0683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				041B5611200F90E5003D25AF /* ViewControllerAbout.m */,
 				0433518B200CDF2C006D0683 /* Main.storyboard */,
 				0433518E200CDF2C006D0683 /* Assets.xcassets */,
+				041B56412010BBA7003D25AF /* ProfileContent.h */,
+				041B56422010BBA7003D25AF /* ProfileContent.m */,
 				04335190200CDF2C006D0683 /* LaunchScreen.storyboard */,
 				04335193200CDF2C006D0683 /* Info.plist */,
 				04335194200CDF2C006D0683 /* main.m */,
@@ -169,6 +174,7 @@
 				04335187200CDF2C006D0683 /* AppDelegate.m in Sources */,
 				041B5612200F90E5003D25AF /* ViewControllerAbout.m in Sources */,
 				041B560F200F90CF003D25AF /* ViewControllerSettings.m in Sources */,
+				041B56432010BBA7003D25AF /* ProfileContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

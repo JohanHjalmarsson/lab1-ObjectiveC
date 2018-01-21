@@ -8,6 +8,7 @@
 
 #import "ViewControllerGame.h"
 #import "Setting.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewControllerGame ()
 @property (weak, nonatomic) IBOutlet UISlider *slider;
@@ -48,19 +49,14 @@
 - (int) getSliderValue {
     return self.slider.value*100;
 }
-- (IBAction)takeGuess:(id)sender {
-    int random = [self getRandomNumber];
-    
-    if ([self getSliderValue] == random) {
-        [self.displayCorrectAnswer setText:@"Rätt!"];
-    } else {
-        [self.displayCorrectAnswer setText:@"Fel! Rätt svar var: "];
-        [self.correctAnswerLabel setText:[NSString stringWithFormat:@"%i", random]];
-    }
-}
+
 - (IBAction)takeGuess2:(id)sender {
     if ([self getSliderValue] == self.randomNumber) {
         [self.displayCorrectAnswer setText:@"Rätt! Talet var:"];
+        self.correctAnswerLabel.hidden = NO;
+        self.guessButton.hidden = YES;
+        self.slider.hidden = YES;
+        self.sliderValueLabel.hidden = YES;
         [self.correctAnswerLabel setText:[NSString stringWithFormat:@"%i", self.randomNumber]];
         [self.startButton setTitle:@"Spela igen" forState:UIControlStateNormal];
     } else {
@@ -70,7 +66,6 @@
             [self.displayCorrectAnswer setText:@"Nej. Talet är för högt!"];
         }
     }
-    
 }
 
 - (void)showUI:(BOOL)show {
@@ -87,6 +82,7 @@
     }
 }
 - (IBAction)onStartButton:(id)sender {
+    self.correctAnswerLabel.hidden = YES;
     self.randomNumber = [self getRandomNumber];
     [self.displayCorrectAnswer setText:@""];
     [self.correctAnswerLabel setText:@""];
@@ -110,6 +106,12 @@
     [self.settings setProperties];
     self.viewWindow.backgroundColor = [UIColor colorWithRed:self.settings.colorRedPrimary green:self.settings.colorGreenPrimary blue:self.settings.colorBluePrimary alpha:0.7f];
     UIColor *buttonColor = [UIColor colorWithRed:self.settings.colorRedSecondary green:self.settings.colorGreenSecondary blue:self.settings.colorBlueSecondary alpha:1.0f];
+    self.guessButton.backgroundColor = buttonColor;
+    self.startButton.backgroundColor = buttonColor;
+    self.guessButton.layer.cornerRadius = 5;
+    self.guessButton.clipsToBounds = YES;
+    self.startButton.layer.cornerRadius = 5;
+    self.startButton.clipsToBounds = YES;
    // self.aboutButton.backgroundColor = buttonColor;
    // self.settingsButton.backgroundColor = buttonColor;
    // self.gameButton.backgroundColor = buttonColor;
